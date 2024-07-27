@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "deluge.fullname" . }}-http
+  labels:
+    {{- include "deluge.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.http.type }}
+  ports:
+    - port: {{ .Values.service.http.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "deluge.selectorLabels" . | nindent 4 }}
+---
+{{ if .Values.service.udp.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "deluge.fullname" . }}-udp
+  labels:
+    {{- include "deluge.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.udp.type }}
+  ports:
+    - port: {{ .Values.service.udp.port }}
+      targetPort: udp
+      protocol: UDP
+      name: udp
+    - port: {{ .Values.service.udp.port }}
+      targetPort: tcp
+      protocol: TCP
+      name: tcp
+  selector:
+    {{- include "deluge.selectorLabels" . | nindent 4 }}
+{{- end -}}
+---
