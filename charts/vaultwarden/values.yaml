@@ -2,13 +2,15 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+domain: ""
+
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: vaultwarden/server
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -23,7 +25,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: "vaultwarden-svc"
 
 podAnnotations: {}
 podLabels: {}
@@ -105,3 +107,13 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+smtp: {}
+# existingSecretKey: vw-smtp-credentials
+# usernameKey: username
+# passwordKey: password
+# username: username
+# password: password
+# host: smtp.gmail.com
+# from: no-reply@example.com
+# security: tls

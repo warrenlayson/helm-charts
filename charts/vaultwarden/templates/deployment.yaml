@@ -36,6 +36,37 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DOMAIN
+              value: {{ .Values.domain }}
+            {{- with .Values.smtp }}
+            - name: SMTP_HOST
+              value: {{ .host }}
+            - name: SMTP_FROM
+              value: {{ .from }}
+            - name: SMTP_PORT
+              value: {{ .port }}
+            - name: SMTP_SECURITY
+              value: {{ .security }}
+            - name: SMTP_USERNAME
+              {{- if .existingSecretKey }}
+              valueFrom:
+                secretKeyRef: 
+                  key: {{ .userKey }}
+                  name: {{ .existingSecretKey }}    
+              {{- else }}
+              value: {{ .username }}
+              {{- end }}
+            - name: SMTP_PASSWORD
+              {{- if .existingSecretKey }}
+              valueFrom:
+                secretKeyRef: 
+                  key: {{ .passwordKey }}
+                  name: {{ .existingSecretKey }}    
+              {{- else }}
+              value: {{ .password }}
+              {{- end }}
+            {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
