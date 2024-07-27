@@ -43,11 +43,11 @@ spec:
           {{- with .Values }}
           env:
             - name: PUID
-              value: {{ .PUID | quote }}
+              value: {{ .puid | quote }}
             - name: PGID
-              value: {{ .PGID | quote }}
+              value: {{ .pgid | quote }}
             - name: TZ
-              value: {{ .TZ }}
+              value: {{ .tz }}
           {{- end }}
           ports:
             - name: http

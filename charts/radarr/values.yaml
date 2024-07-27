@@ -16,9 +16,9 @@ nameOverride: ""
 fullnameOverride: ""
 
 env:
-  PUID: 1000
-  PGID: 1000
-  TZ: Etc/UTC
+  puid: 1000
+  pgid: 1000
+  tz: Etc/UTC
 
 serviceAccount:
   # Specifies whether a service account should be created
