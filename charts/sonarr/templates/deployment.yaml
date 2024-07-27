@@ -40,13 +40,15 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- with .Values.env }}
           env:
             - name: PUID
-              value: {{ .Values.PUID | quote }}
+              value: {{ .PUID | quote }}
             - name: PGID
-              value: {{ .Values.PGID | quote }}
+              value: {{ .PGID | quote }}
             - name: TZ
-              value: {{ .Values.TZ }}
+              value: {{ .TZ }}
+          {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

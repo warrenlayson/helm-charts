@@ -15,9 +15,10 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-PUID: 1000
-PGID: 1000
-TZ: Etc/UTC
+env:
+  PUID: 1000
+  PGID: 1000
+  TZ: Etc/UTC
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -80,8 +81,7 @@ startupProbe:
     path: /
     port: http
   periodSeconds: 10
-  timeoutSeconds: 20
-  failureThreshold: 3  
+  failureThreshold: 30
 livenessProbe:
   httpGet:
     path: /
