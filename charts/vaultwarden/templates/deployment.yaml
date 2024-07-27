@@ -45,7 +45,7 @@ spec:
             - name: SMTP_FROM
               value: {{ .from }}
             - name: SMTP_PORT
-              value: {{ .port }}
+              value: {{ .port | quote }}
             - name: SMTP_SECURITY
               value: {{ .security }}
             - name: SMTP_USERNAME
