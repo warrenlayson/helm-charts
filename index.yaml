@@ -3,6 +3,16 @@ entries:
   bazarr:
   - apiVersion: v2
     appVersion: 1.4.3
+    created: "2024-07-28T05:13:31.752461418Z"
+    description: A Helm chart for Kubernetes
+    digest: 6673bac5e600eb6e3827b375e21eccc82a276b885af008c6d0e576618e711f2c
+    name: bazarr
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/bazarr-0.1.2/bazarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.4.3
     created: "2024-07-28T03:41:59.590642737Z"
     description: A Helm chart for Kubernetes
     digest: 9851f257bb45caee65c87d8735d81ecbd161453199f3b860a6a145c067826fe5
@@ -116,4 +126,4 @@ entries:
     urls:
     - https://github.com/warrenlayson/helm-charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-28T03:44:51.673032215Z"
+generated: "2024-07-28T05:13:31.752510701Z"
