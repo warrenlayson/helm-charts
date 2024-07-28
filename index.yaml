@@ -34,6 +34,16 @@ entries:
   deluge:
   - apiVersion: v2
     appVersion: 2.1.1
+    created: "2024-07-28T13:06:06.926402898Z"
+    description: A Helm chart for Kubernetes
+    digest: 5d658929c7849fb41ee7bb74f90d6291762f8d8a750c20ebc7a1972eb589395a
+    name: deluge
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/deluge-0.1.3/deluge-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 2.1.1
     created: "2024-07-28T12:58:04.64328314Z"
     description: A Helm chart for Kubernetes
     digest: ce03c8eabd86e0e3753ef82778350c964bd8845b9bd57bf2181ca9910062fcfd
@@ -157,4 +167,4 @@ entries:
     urls:
     - https://github.com/warrenlayson/helm-charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-28T12:58:04.643317554Z"
+generated: "2024-07-28T13:06:06.92643645Z"
