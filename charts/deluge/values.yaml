@@ -48,13 +48,13 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  type: ClusterIP
   http:
-    type: ClusterIP
-    port: 8112
+    port: 80
+    targetPort: 8112
   udp:
-    enabled: false
-    type: LoadBalancer
     port: 6881
+    targetPort: 6881
 
 ingress:
   enabled: false
