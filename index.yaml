@@ -45,6 +45,16 @@ entries:
   prowlarr:
   - apiVersion: v2
     appVersion: 1.21.2
+    created: "2024-07-28T03:44:51.672980148Z"
+    description: A Helm chart for Kubernetes
+    digest: 4b701d3f1d57d9fa5449acfc3ee20284893b9aae36e46dfffd95c751d984269a
+    name: prowlarr
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/prowlarr-0.1.1/prowlarr-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.21.2
     created: "2024-07-28T03:41:59.873464729Z"
     description: A Helm chart for Kubernetes
     digest: 490a7913d46451335ca36cd4a48ff0c2c8411053f4c959eef39ff69c58586fc4
@@ -106,4 +116,4 @@ entries:
     urls:
     - https://github.com/warrenlayson/helm-charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-28T03:42:00.204132405Z"
+generated: "2024-07-28T03:44:51.673032215Z"
