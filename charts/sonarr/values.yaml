@@ -46,7 +46,8 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8989
+  port: 80
+  targetPort: 8989
 
 ingress:
   enabled: false
