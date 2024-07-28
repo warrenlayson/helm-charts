@@ -52,6 +52,17 @@ entries:
     urls:
     - https://github.com/warrenlayson/helm-charts/releases/download/deluge-0.1.0/deluge-0.1.0.tgz
     version: 0.1.0
+  flaresolverr:
+  - apiVersion: v2
+    appVersion: 3.3.21
+    created: "2024-07-28T05:24:09.419492469Z"
+    description: A Helm chart for Kubernetes
+    digest: 9a54144c2e9512d5875b1feaa4371d7a735cdb19b4d8c92442bf85486186f9fc
+    name: flaresolverr
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/flaresolverr-0.1.0/flaresolverr-0.1.0.tgz
+    version: 0.1.0
   prowlarr:
   - apiVersion: v2
     appVersion: 1.21.2
@@ -126,4 +137,4 @@ entries:
     urls:
     - https://github.com/warrenlayson/helm-charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-28T05:13:31.752510701Z"
+generated: "2024-07-28T05:24:09.41951457Z"
