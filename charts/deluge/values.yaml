@@ -49,12 +49,17 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  http:
-    port: 80
-    targetPort: 8112
-  udp:
-    port: 6881
-    targetPort: 6881
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8112
+      protocol: TCP
+    - name: udp
+      port: 6881
+      protocol: UDP
+    - name: tcp
+      port: 6881
+      protocol: TCP
 
 ingress:
   enabled: false

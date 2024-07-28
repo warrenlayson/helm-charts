@@ -37,15 +37,11 @@ spec:
           image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
-              containerPort: {{ .Values.service.http.port }}
-              protocol: TCP
-            - name: udp
-              containerPort: {{ .Values.service.udp.port }}
-              protocol: UDP
-            - name: tcp
-              containerPort: {{ .Values.service.udp.port }}
-              protocol: TCP
+            {{- range .Values.service.ports }}
+              - name: {{ .name }}
+                containerPort: {{ .targetPort | default .port }}
+                protocol: {{ .protocol }}
+            {{- end}}
           {{- with .Values.env }}
           env:
             - name: PUID
@@ -55,7 +51,7 @@ spec:
             - name: TZ
               value: {{ .tz }}
             - name: DELUGE_LOGLEVEL
-              value: {{ .loglevel }}
+              value: {{ .logLevel }}
           {{- end }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
