@@ -3,6 +3,16 @@ entries:
   bazarr:
   - apiVersion: v2
     appVersion: 1.4.3
+    created: "2024-07-28T17:28:00.143515441Z"
+    description: A Helm chart for Kubernetes
+    digest: 80ed44fe496bec077bd4a72ff86c69847871474822b5c4cfb41d2c08b2ba1b8a
+    name: bazarr
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/bazarr-0.1.3/bazarr-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.4.3
     created: "2024-07-28T05:13:31.752461418Z"
     description: A Helm chart for Kubernetes
     digest: 6673bac5e600eb6e3827b375e21eccc82a276b885af008c6d0e576618e711f2c
@@ -96,6 +106,16 @@ entries:
   prowlarr:
   - apiVersion: v2
     appVersion: 1.21.2
+    created: "2024-07-28T17:28:00.312621324Z"
+    description: A Helm chart for Kubernetes
+    digest: 16233358a126d80cf69c46b8a04625da4bb25fd7a5f594f1f7815668142ac61d
+    name: prowlarr
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/prowlarr-0.1.2/prowlarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.21.2
     created: "2024-07-28T03:44:51.672980148Z"
     description: A Helm chart for Kubernetes
     digest: 4b701d3f1d57d9fa5449acfc3ee20284893b9aae36e46dfffd95c751d984269a
@@ -117,6 +137,16 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: 5.8.3
+    created: "2024-07-28T17:28:00.515436227Z"
+    description: A Helm chart for Kubernetes
+    digest: 9da5a2ef2f4f5728e5c9aa17a2773334030efaed502cc59f39eadbff18b87b1c
+    name: radarr
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/radarr-0.1.2/radarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 5.8.3
     created: "2024-07-28T03:42:00.047499343Z"
     description: A Helm chart for Kubernetes
     digest: 7ac3988d9f8c99ca22f9cc589f947d430b7561634e7ae50287d007d1e2d9b56c
@@ -136,6 +166,16 @@ entries:
     - https://github.com/warrenlayson/helm-charts/releases/download/radarr-0.1.0/radarr-0.1.0.tgz
     version: 0.1.0
   sonarr:
+  - apiVersion: v2
+    appVersion: 4.0.8
+    created: "2024-07-28T17:28:00.681075544Z"
+    description: A Helm chart for Kubernetes
+    digest: 7a51254b9b5ac54712c45cedfda199fc747374dca407d5266803a5600f2ce24a
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/sonarr-0.1.2/sonarr-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 4.0.8
     created: "2024-07-28T03:42:00.204070329Z"
@@ -167,4 +207,4 @@ entries:
     urls:
     - https://github.com/warrenlayson/helm-charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-28T13:06:06.92643645Z"
+generated: "2024-07-28T17:28:00.681139754Z"
