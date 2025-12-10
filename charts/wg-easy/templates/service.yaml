@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "wg-easy.fullname" . }}
+  labels:
+    {{- include "wg-easy.labels" . | nindent 4 }}
+  {{- with .Values.service.annotations }}
+  annotations:
+    {{- toYaml . | indent 4 }}
+  {{- end }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.ports.web.exposedPort }}
+      targetPort: {{ .Values.ports.web.port }}
+      protocol: {{ .Values.ports.web.protocol }}
+      name: web
+    - port: {{ .Values.ports.wg.exposedPort }}
+      targetPort: {{ .Values.ports.wg.port }}
+      protocol: {{ .Values.ports.wg.protocol }}
+      name: wg
+  selector:
+    {{- include "wg-easy.selectorLabels" . | nindent 4 }}
