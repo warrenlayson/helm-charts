@@ -218,4 +218,15 @@ entries:
     urls:
     - https://github.com/warrenlayson/helm-charts/releases/download/vaultwarden-0.1.0/vaultwarden-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-30T04:25:52.358003249Z"
+  wg-easy:
+  - apiVersion: v2
+    appVersion: 15.1.0
+    created: "2025-12-10T04:08:25.130187901Z"
+    description: A Helm chart for Kubernetes
+    digest: 9cfaad8df8a4c16fee4216613ae04b0ad0c9d81fa637f56606c15c5365bff644
+    name: wg-easy
+    type: application
+    urls:
+    - https://github.com/warrenlayson/helm-charts/releases/download/wg-easy-0.1.0/wg-easy-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-12-10T04:08:25.130229273Z"
